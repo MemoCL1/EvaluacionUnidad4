@@ -2,14 +2,15 @@
 
 class persona:
 
-    def __init__(self,nombre,apellidos,edad,altura,peso,saldoCuenta,fechaNacimiento):
-        self.__nombre = nombre
-        self.__apellidos = apellidos
-        self.__edad = edad
-        self.__altura = altura
-        self.__peso = peso
-        self.__credito = float(saldoCuenta)
-        self.__nacimiento = fechaNacimiento
+    def __init__(self,nombre,apellidos,edad,altura,peso,saldoCuenta,fechaNacimiento,vestimenta):
+        self.nombre = nombre
+        self.apellidos = apellidos
+        self.edad = edad
+        self.altura = altura
+        self.peso = peso
+        self.credito = float(saldoCuenta)
+        self.nacimiento = fechaNacimiento
+        self.vestimenta = vestimenta
 
     def saludar(self):
         print("Hola buenos dias")
@@ -19,6 +20,7 @@ class persona:
 
     def presentarseFormalmente(self):
         print("Mi nombre completo es",self.__nombre,self.__apellidos)
+
 
 class Empleado(persona):
     def __init__(self, nombre, altura, vestimenta, empresa, puesto):
@@ -39,3 +41,14 @@ class Gerente(Empleado):
 
     def entrevistar(self, persona):
         print(f'Estoy entrevistando a {persona}')
+
+class Ropa:
+    def __init__(self,color):
+        self.color = color
+        self.cierre = None
+        self.botones = None
+        self.bolsillos = None
+        self.grande = None
+        self.nuevo =None
+
+
