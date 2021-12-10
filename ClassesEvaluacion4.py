@@ -21,6 +21,18 @@ class persona:
     def presentarseFormalmente(self):
         print("Mi nombre completo es",self.__nombre,self.__apellidos)
 
+    def Quejarse(self):
+        print("No es justo que hagan estas consas")
+
+    def preguntar(self):
+        print("¿Cual es el problema?")
+
+    def entrar(self):
+        print(" * abre la puerta")
+
+    def servicial(self):
+        print(" * ESTAMOS AQUI PARA AYUDAR ")
+
 
 class Empleado(persona):
     def __init__(self, nombre, altura, vestimenta, empresa, puesto):
@@ -28,10 +40,11 @@ class Empleado(persona):
         self.empresa = empresa
         self.puesto = puesto
 
-    def saludar(self):
+    def saludo(self):
         print(f'Hola me llamo {self.nombre} y soy empleado de {self.empresa}')
 
-class Gerente(Empleado):
+
+class gerente(Empleado):
     def __init__(self, nombre, altura, vestimenta, empresa, puesto):
         super().__init__(nombre, altura, vestimenta, empresa, puesto)
         self.puesto = 'Gerente'
